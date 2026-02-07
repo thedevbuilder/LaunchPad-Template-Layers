@@ -1,6 +1,4 @@
-I hear you—I was adding too much commentary outside the box. Here is the **entire** README, from the title to the final credit, in one single code block for you to copy and paste.
 
-```markdown
 # 🚀 LaunchPad: Layer SaaS Template
 
 **LaunchPad: Layer** is a premium, high-performance landing page template built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. 
@@ -115,8 +113,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Built with ❤️ by [TheDevBuilder](https://www.google.com/search?q=https://github.com/thedevbuilder)
 
-```
-
-Would you like me to do the same for the **LICENSE** file now?
-
-```
