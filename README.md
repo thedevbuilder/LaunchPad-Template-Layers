@@ -1,4 +1,3 @@
-
 # 🚀 LaunchPad: Layer SaaS Template
 
 **LaunchPad: Layer** is a premium, high-performance landing page template built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. 
@@ -9,8 +8,10 @@ Unlike traditional templates, Layer is **Data-Driven**. This means you can manag
 
 ## 📺 Preview
 Check out the "Layer" template in action:
-
 ![LaunchPad Layer Showcase](https://your-uploaded-gif-link-here.gif)
+
+[🌐 Live Demo Preview](https://launch-pad-template-layers-preview.vercel.app/)
+
 
 ---
 
@@ -97,11 +98,11 @@ The FAQ section grows automatically as you add items to the `QA` array:
 
 ## ✨ Key Features
 
-* ✅ **Next.js 15 App Router** - The latest industry standard.
+* ✅ **Next.js 15** - The latest industry standard.
 * ✅ **Tailwind CSS** - Modern styling that is easy to tweak.
 * ✅ **Framer Motion** - Smooth, premium entrance animations.
 * ✅ **Lucide Icons** - Swap icons just by typing their name.
-* ✅ **Type Safe** - Built with TypeScript for a better developer experience.
+* ✅ **Type Safe** - Built with TypeScript for better error catching.
 
 ---
 
@@ -113,3 +114,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Built with ❤️ by [TheDevBuilder](https://www.google.com/search?q=https://github.com/thedevbuilder)
 
+```
+
+Would you like me to help you create a **"How to contribute"** section if you're planning to make this an open-source project for others to help build?
+
+```
