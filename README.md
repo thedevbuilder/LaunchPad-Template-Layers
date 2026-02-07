@@ -7,11 +7,7 @@
 ## 📺 Video Showcase
 See how the "Layer" template looks and works in action:
 
-<details>
-  <summary><b>🎬 View Live Demo</b></summary>
-  <br>
-  <img src="assets/images/demo.gif" alt="Project Demo" width="600">
-</details>
+![LaunchPad Demo](assets/images/demo.gif)
 
 ---
 
