@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {Poppins } from "next/font/google";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -7,11 +8,11 @@ const poppins = Poppins({
   weight: ['400', '600', '700'], // Choose the weights you need
   variable: '--font-poppins',    // This creates a CSS variable
 });
-
+ const {title,description} = siteConfig
 
 export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "A Saas Landing Page",
+  title: title,
+  description:description
 };
 
 export default function RootLayout({

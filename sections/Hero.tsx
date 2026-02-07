@@ -8,7 +8,9 @@ import Pointer from "@/components/pointer"
 import { easeIn, easeInOut, motion,useAnimate } from "framer-motion"
 import { useEffect } from "react"
 import  Icon from "@/components/icon"
+import { siteConfig } from "@/config/site"
  export default function Hero(){
+    const {hook,title,paragraph} =siteConfig['Hero']
     const [leftscope,leftanimate] =useAnimate()
     const [leftpointerscope,leftpointeranimate] =useAnimate()
     const [rightscope,rightanimate] = useAnimate()
@@ -52,14 +54,14 @@ import  Icon from "@/components/icon"
                 {/* highlight */}
              <div className="flex justify-center">
                 <div className="inline-flex justify-center p-4 py-1 font-poppins gap-0.5 items-center text-xs text-white/60  font-medium px-3 bg-linear-to-r from-purple-400 to-pink-400 rounded-full">
-                    <Icon name='Sparkles' className="text-white/60 size-3"/> $7.5M seed round raised
+                    <Icon name='Sparkles' className="text-white/60 size-3"/>{hook}
                 </div>
                 </div>
                 {/* headline */}
                 <h1 className="text-5xl md:text-6xl px-5 xl:text-8xl  mx-auto font-medium leading-tight max-w-5xl text-center font-poppins mt-6">
-                    Impactful design, created effortlessly
+                    {title}
                 </h1>
-                <p className="text-center max-w-2xl mx-auto px-2.5 text-sm text-white/50 mt-8 font-poppins">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero soluta enim, et est perferendis ad, facilis velit sapiente iure, cupiditate officiis ipsum. Amet minus quae, dolorum quis cupiditate eaque.</p>
+                <p className="text-center max-w-2xl mx-auto px-2.5 text-sm text-white/50 mt-8 font-poppins">{paragraph}</p>
                     {/* right */}
                 <motion.div 
                  ref={rightpointerscope}

@@ -3,10 +3,12 @@ import { useScroll, useTransform } from "framer-motion"
 import Tag from "@/components/Tag"
 import {useEffect, useRef, useState } from "react"
 import { twMerge } from "tailwind-merge"
+import { siteConfig } from "@/config/site"
 export default function Intro(){
+    const {introduction} = siteConfig
     const scrollTarget =  useRef<HTMLDivElement>(null)
     const {scrollYProgress} = useScroll({target:scrollTarget,offset:['start end','end end']})
-    const texts = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit laudantiuum tempore rem, quasi excepturi.".split(' ')
+    const texts = introduction["body"].split(' ')
     const [current,setCurrent] = useState(0)
     const wordindex = useTransform(scrollYProgress,[0,1],[0,texts.length])
     useEffect(()=>{
@@ -18,7 +20,7 @@ export default function Intro(){
         <div className="sticky top-20 md:top-28 lg:top-40">
             <div className="flex justify-center">
                 <Tag>
-                    Introducing Layers
+                   {introduction["headline"]}
                 </Tag>
             </div>
             <div className="text-3xl md:text-5xl lg:text-6xl text-center font-medium mt-10 font-poppins">
@@ -41,7 +43,7 @@ export default function Intro(){
     );
 })}
                 </span>
-                <span className="text-lime-400 block">That&apos;s why we built layers</span>
+                <span className="text-lime-400 block">{introduction["conclusion"]}</span>
             </div>
         </div>
         <div className="h-[150vh]" ref={scrollTarget}></div>

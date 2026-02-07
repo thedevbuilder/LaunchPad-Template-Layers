@@ -1,29 +1,17 @@
 import Tag from "@/components/Tag";
 import FeatureCard from "@/components/featurecard";
-import avatar1 from "@/assets/images/avatar-ashwin-santiago.jpg"
-import avatar2 from "@/assets/images/avatar-florence-shaw.jpg"
-import avatar3 from "@/assets/images/avatar-lula-meyers.jpg"
 import Image from "next/image";
 import Key from "@/components/keys";
 import Avatar from "@/components/avatar";
-
-const features = [
-    "Asset Library",
-    "Code Preview",
-    "Flow Mode",
-    "Smart Sync",
-    "Auto Layout",
-    "Fast Search",
-    "Smart Guides",
-];
-
+import { siteConfig } from "@/config/site";
 export default function Features() {
+    const {features} = siteConfig
     return <section>
         <div className="">
             <div className="flex justify-center">
-            <Tag>Features</Tag>
+            <Tag>{features["headline"]}</Tag>
             </div>
-            <h2 className="text-6xl mt-6 text-center font-poppins font-medium max-w-2xl mx-auto">Where Power meets <span className="text-lime-400">simplicity</span></h2>
+            <h2 className="text-6xl mt-6 text-center font-poppins font-medium max-w-2xl mx-auto">{features['hook']} <span className="text-lime-400">{features['powerWord']}</span></h2>
         </div>
         <div className="mt-12 max-w-5xl gap-8 grid w-xs md:w-full grid-cols-1 lg:grid-cols-3 md:grid-cols-4 mx-auto">
             <FeatureCard
@@ -32,13 +20,13 @@ export default function Features() {
             description="Work together seemlessly with conflict-free team editing"
             >
             <Avatar className="z-40 border-blue-400">
-                 <Image className="rounded-full" src={avatar1} alt="avatar one"/>
+                 <Image className="rounded-full" src={features['images']['avatar1']} alt="avatar one"/>
             </Avatar>
              <Avatar className="border-purple-400 z-20 -ml-6">
-                 <Image className="rounded-full" src={avatar2} alt="avatar two"/>
+                 <Image className="rounded-full" src={features['images']["avatar2"]} alt="avatar two"/>
             </Avatar>
              <Avatar className="border-amber-400 z-10 -ml-6">
-                 <Image className="rounded-full" src={avatar3} alt="avatar three"/>
+                 <Image className="rounded-full" src={features['images']["avatar3"]} alt="avatar three"/>
             </Avatar>
             <div className=" flex justify-center items-center gap-x-0.5  size-20 rounded-full overflow-hidden z-0 -ml-6 bg-white/25">
                 {['1','2','3'].map(x=> <span key={x} className="rounded-full bg-white  w-0.5 h-0.5 p-1"></span>)}
@@ -72,7 +60,7 @@ export default function Features() {
             </FeatureCard>
         </div>
     <div className="mt-8 font-poppins max-w-5xl mx-auto flex flex-wrap gap-3 justify-center ">
-            {features.map(x=>(
+            {features['list'].map(x=>(
             <div className="text-xs font-medium  md:text-xl items-center gap-2 bg-neutral-900 border border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl" key={x}>
                 <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex  items-center justify-center">&#10038;</span>
                 <span>{x}</span>

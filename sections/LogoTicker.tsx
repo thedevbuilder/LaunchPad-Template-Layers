@@ -1,29 +1,12 @@
 "use client"
-import quantumLogo from "@/assets/images/quantum.svg";
-import acmeLogo from "@/assets/images/acme-corp.svg";
-import echoValleyLogo from "@/assets/images/echo-valley.svg";
-import pulseLogo from "@/assets/images/pulse.svg";
-import outsideLogo from "@/assets/images/outside.svg";
-import apexLogo from "@/assets/images/apex.svg";
-import celestialLogo from "@/assets/images/celestial.svg";
-import twiceLogo from "@/assets/images/twice.svg";
 import Image from "next/image";
 import { Fragment } from "react";
 import { motion } from "framer-motion";
-const logos = [
-    { name: "Quantum", image: quantumLogo },
-    { name: "Acme Corp", image: acmeLogo },
-    { name: "Echo Valley", image: echoValleyLogo },
-    { name: "Pulse", image: pulseLogo },
-    { name: "Outside", image: outsideLogo },
-    { name: "Apex", image: apexLogo },
-    { name: "Celestial", image: celestialLogo },
-    { name: "Twice", image: twiceLogo },
-];
-
+import {siteConfig} from "@/config/site"
 export default function LogoTicker() {
+    const {LogoTicker} = siteConfig
     return <div className="mx-auto py-24 overflow-x-clip">
-            <h2 className="text-white/80 text-center text-md font-poppins">Already choose by these market leaders</h2>
+        <h2 className="text-white/80 text-center text-md ont-poppins">Already choose by these market leaders</h2>
         <div className="my-10 overflow-hidden mt-12 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
          <motion.div
          animate={{
@@ -37,7 +20,7 @@ export default function LogoTicker() {
          className="flex flex-none pr-24 gap-24">
             {Array.from({length:2}).map((_,i)=>(
                     <Fragment key={i}>
-                        {logos.map(x=><Image height={45} src={x.image} alt={x.name} key={x.name}/>)}
+                        {LogoTicker['logos'].map(x=><Image height={45} src={x.image} alt={x.name} key={x.name}/>)}
                     </Fragment>
                 )
             )

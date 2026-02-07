@@ -6,12 +6,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { twMerge } from "tailwind-merge"
 import { AnimatePresence,motion } from "framer-motion"
-const navlink =[
-    { label:"Home",link:"#home"},
-     { label:"Features",link:"#Features"},
-      { label:"Integrations",link:"#Integrations"},
-       { label:"Faqs",link:"#faqs"}
-]
+import { siteConfig } from "@/config/site"
+const {navLinkHeader} = siteConfig
 export default function Navbar(){
     const [isOpen,setisOpen] = useState(false)
     return <section className="py-4 px-2 lg:py-8 fixed w-full m top-0 z-50 ">
@@ -23,7 +19,7 @@ export default function Navbar(){
                          alt="the logo of landing page"/>
                     </div>
                     <nav className="hidden font-poppins gap-6 font-medium  justify-center md:flex">
-                        {navlink.map(x=><Link key={x.label} href={x.link} >{x.label}</Link>)}
+                        {navLinkHeader.map(x=><Link key={x.label} href={x.link} >{x.label}</Link>)}
                     </nav>
                     <div className="flex justify-end  md:gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +46,7 @@ export default function Navbar(){
                  exit={{height:0}}
                 className="overflow-hidden">
                     <div   className="flex flex-col items-center py-4 gap-4">
-                        {navlink.map(link=> <a key={link.label}className="py-2 font-poppins" href={link.link}>{link.label}</a>)}
+                        {navLinkHeader.map(link=> <a key={link.label}className="py-2 font-poppins" href={link.link}>{link.label}</a>)}
                         <Button  variant="secondary" size="sm">Login</Button>
                          <Button variant="primary" size="sm">Sign up</Button>
                     </div>
