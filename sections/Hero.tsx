@@ -77,13 +77,13 @@ import { siteConfig } from "@/config/site"
                     <Image  draggable="false"  src={designexample_two} width={300} alt="showcase layers app in action"/>
                 </motion.div>
                 </div>
-                <form className="flex max-w-xs z-25 md:max-w-lg border mx-auto  border-white/50 rounded-full mt-8">
+                <form className="flex max-w-xl z-25 md:max-w-lg border p-3 mx-auto  border-white/50 rounded-full mt-8">
                 <input
                 type="email"
                 placeholder="Enter your mail"
-                className="bg-transparent text-sm pl-2 whitespace-nowrap font-poppins flex-1 outline-none"
+                className="bg-transparent text-sm whitespace-nowrap font-poppins flex-1 outline-none"
                 /> 
-                <Button type="submit" variant="primary" size="smx">Sign Up</Button>
+                <Button type="submit" className="shrink-0" variant="primary" size="smx">Sign Up</Button>
                 </form>
     </section>
  }
